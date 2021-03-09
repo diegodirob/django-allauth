@@ -12,7 +12,7 @@ class AsanaProvider(OAuth2Provider):
     account_class = AsanaAccount
 
     def extract_uid(self, data):
-        return str(data["id"])
+        return str(data["gid"])
 
     def extract_common_fields(self, data):
         return dict(email=data.get("email"), name=data.get("name"))
